@@ -16,6 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from hello_app.views import index_view
 
 """
 localhost:8000/admin/
@@ -23,6 +24,7 @@ localhost:8000/
     path('', myview) 
 """
 urlpatterns = [
+    path('', index_view),
     path('admin/', admin.site.urls),
     
 ]
